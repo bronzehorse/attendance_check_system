@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <script>
+        var seatCount = 2
+        var arrayNo = [
+            "G019C9999",
+            "G019C0000"
+        ]
+        var arraySt = [
+            "八王子太郎",
+            "八王子花子"
+        ]
+        var arrayHM = [
+            new Date( 2020, 2, 28, 9, 27 ),
+            new Date( 2020, 2, 28, 9, 45 ) 
+        ]
+        function clickBtn1(){
+            if (document.getElementById("poi2").getAttribute("value")=="↑") {
+                document.getElementById("classroom").setAttribute("class","flex2")
+                document.getElementById("poi").setAttribute("class","flex2")
+                document.getElementById("poi2").setAttribute("value","↓")
+            }else{
+                document.getElementById("classroom").setAttribute("class","flex")
+                document.getElementById("poi").setAttribute("class","flex")
+                document.getElementById("poi2").setAttribute("value","↑")
+            }
+        }
+        function clickBtn2(){
+            var d = document.getElementById("poi4").value
+            var d1 = document.getElementById("poi3").value
+            var d2 = new Date( d + " " + d1)
+                alert( d2 )
+            for( var i = 0; i < 2; i++ ){
+                alert( arrayHM[i] )
+                if( arrayHM[i].getTime() > d2.getTime() ){
+                    document.getElementById("seat" + (i + 1)).setAttribute("class","oneSeat2")
+                }
+            }
+        }
+        function pStu(idx){
+            document.write(arrayNo[idx], "<br>", arraySt[idx], "<br>", arrayHM[idx].getHours(), ":", arrayHM[idx].getMinutes() );
+        }
+    </script>
+    <style>
+        .flex{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .flex2{
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap-reverse;
+            justify-content: space-evenly;
+        }
+        .lectern{
+            width: 100%;
+        }
+        .oneSeat{
+            margin: 5px 0;
+            padding: 10px;
+            width: 9%;
+            text-align: center;
+            background-color: antiquewhite;
+            border:inset 1px black;
+            box-sizing: border-box;
+        }
+        .oneSeat2{
+            margin: 5px 0;
+            padding: 10px;
+            width: 9%;
+            text-align: center;
+            background-color: antiquewhite;
+            border:inset 1px blue;
+            box-sizing: border-box;
+        }
+        .passage1{
+            width: 3%;
+            box-sizing: border-box;
+        }
+        .passage2{
+            width: 4%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="poi2" type="button" value="↑" onclick="clickBtn1()">
+    <input id="poi3" type="date">
+    <input id="poi4" type="time">
+    <input type="button" value="遅刻判定" onclick="clickBtn2()">
+    <p>研究棟B 702教室</p>
+    <p>座席数 80</p>
+    <p>学科</p>
+    <p>学年</p>
+    <p>クラス</p>
+    <div id="classroom" class="flex">
+        <div>教卓</div>
+        <div id="poi" class="flex">
+                
+                <div class="passage1"></div>
+                
+                <div id="seat1" class="oneSeat"><script>pStu(0);</script></div>
+                <div id="seat2" class="oneSeat"><script>pStu(1);</script></div>
+                <div id="seat3" class="oneSeat">3</div>
+                <div id="seat4" class="oneSeat">4</div>
+                <div id="seat5" class="oneSeat">5</div>
+                
+                <div class="passage2"></div>
+                
+                <div id="seat6" class="oneSeat">6</div>
+                <div id="seat7" class="oneSeat">7</div>
+                <div id="seat8" class="oneSeat">8</div>
+                <div id="seat9" class="oneSeat">9</div>
+                <div id="seat10" class="oneSeat">10</div>
+                
+                <div class="passage1"></div>
+                
+                <div class="passage1"></div>
+                
+                <div id="seat11" class="oneSeat">11</div>
+                <div id="seat12" class="oneSeat">12</div>
+                <div id="seat13" class="oneSeat">13</div>
+                <div id="seat14" class="oneSeat">14</div>
+                <div id="seat15" class="oneSeat">15</div>
+                
+                <div class="passage2"></div>
+                
+                <div id="seat16" class="oneSeat">16</div>
+                <div id="seat17" class="oneSeat">17</div>
+                <div id="seat18" class="oneSeat">18</div>
+                <div id="seat19" class="oneSeat">19</div>
+                <div id="seat20" class="oneSeat">20</div>
+                
+                <div class="passage1"></div>
+                
+                <div class="passage1"></div>
+                
+                <div id="seat21" class="oneSeat">21</div>
+                <div id="seat22" class="oneSeat">22</div>
+                <div id="seat23" class="oneSeat">23</div>
+                <div id="seat24" class="oneSeat">24</div>
+                <div id="seat25" class="oneSeat">25</div>
+                
+                <div class="passage2"></div>
+                
+                <div id="seat26" class="oneSeat">26</div>
+                <div id="seat27" class="oneSeat">27</div>
+                <div id="seat28" class="oneSeat">28</div>
+                <div id="seat29" class="oneSeat">29</div>
+                <div id="seat30" class="oneSeat">30</div>
+                
+                <div class="passage1"></div>
+                
+                <div class="passage1"></div>
+                
+                <div id="seat31" class="oneSeat">31</div>
+                <div id="seat32" class="oneSeat">32</div>
+                <div id="seat33" class="oneSeat">33</div>
+                <div id="seat34" class="oneSeat">34</div>
+                <div id="seat35" class="oneSeat">35</div>
+                
+                <div class="passage2"></div>
+                
+                <div id="seat36" class="oneSeat">36</div>
+                <div id="seat37" class="oneSeat">37</div>
+                <div id="seat38" class="oneSeat">38</div>
+                <div id="seat39" class="oneSeat">39</div>
+                <div id="seat40" class="oneSeat">40</div>
+                
+                <div class="passage1"></div>
+                
+                <div class="passage1"></div>
+                
+                <div id="seat41" class="oneSeat">41</div>
+                <div id="seat42" class="oneSeat">42</div>
+                <div id="seat43" class="oneSeat">43</div>
+                <div id="seat44" class="oneSeat">44</div>
+                <div id="seat45" class="oneSeat">45</div>
+                
+                <div class="passage2"></div>
+                
+                <div id="seat46" class="oneSeat">46</div>
+                <div id="seat47" class="oneSeat">47</div>
+                <div id="seat48" class="oneSeat">48</div>
+                <div id="seat49" class="oneSeat">49</div>
+                <div id="seat50" class="oneSeat">50</div>
+                
+                <div class="passage1"></div>
+                
+                <div class="passage1"></div>
+                
+                <div id="seat51" class="oneSeat">51</div>
+                <div id="seat52" class="oneSeat">52</div>
+                <div id="seat53" class="oneSeat">53</div>
+                <div id="seat54" class="oneSeat">54</div>
+                <div id="seat55" class="oneSeat">55</div>
+                
+                <div class="passage2"></div>
+                
+                <div id="seat56" class="oneSeat">56</div>
+                <div id="seat57" class="oneSeat">57</div>
+                <div id="seat58" class="oneSeat">58</div>
+                <div id="seat59" class="oneSeat">59</div>
+                <div id="seat60" class="oneSeat">60</div>
+                
+                <div class="passage1"></div>
+                
+                <div class="passage1"></div>
+                
+                <div id="seat61" class="oneSeat">61</div>
+                <div id="seat62" class="oneSeat">62</div>
+                <div id="seat63" class="oneSeat">63</div>
+                <div id="seat64" class="oneSeat">64</div>
+                <div id="seat65" class="oneSeat">65</div>
+                
+                <div class="passage2"></div>
+                
+                <div id="seat66" class="oneSeat">66</div>
+                <div id="seat67" class="oneSeat">67</div>
+                <div id="seat68" class="oneSeat">68</div>
+                <div id="seat69" class="oneSeat">69</div>
+                <div id="seat70" class="oneSeat">70</div>
+                
+                <div class="passage1"></div>
+                
+                <div class="passage1"></div>
+                
+                <div id="seat71" class="oneSeat">71</div>
+                <div id="seat72" class="oneSeat">72</div>
+                <div id="seat73" class="oneSeat">73</div>
+                <div id="seat74" class="oneSeat">74</div>
+                <div id="seat75" class="oneSeat">75</div>
+                
+                <div class="passage2"></div>
+                
+                <div id="seat76" class="oneSeat">76</div>
+                <div id="seat77" class="oneSeat">77</div>
+                <div id="seat78" class="oneSeat">78</div>
+                <div id="seat79" class="oneSeat">79</div>
+                <div id="seat80" class="oneSeat">80</div>
+                
+                <div class="passage1"></div>
+                
+        </div>
+    </div>
+</body>
+
+</html>
